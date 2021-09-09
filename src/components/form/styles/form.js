@@ -13,6 +13,10 @@ export const Container = styled.div`
 	padding: 30px 68px 40px;
 	margin: 150px;
 	align-self: center;
+
+	@media (min-width: 1200px) {
+		min-width: 700px;
+	}
 `;
 
 export const Break = styled.br``;
@@ -75,8 +79,8 @@ export const Link = styled(ReachRouterLink)`
 `;
 
 export const Input = styled.input`
-	background: #c5c5c5;
-	border-radius: 6px;
+	background: #242c37;
+	border-radius: 3px;
 	border: 0;
 	font-size: 16px;
 	color: #000000;
@@ -86,8 +90,17 @@ export const Input = styled.input`
 	padding: 5px 20px;
 	margin-bottom: 20px;
 
+	&:focus {
+		border: 2px solid blueviolet;
+	}
+	&:hover {
+		border: 2px solid blueviolet;
+	}
 	&:last-of-type {
 		margin-bottom: 5px;
+	}
+	@media (min-width: 1200px) {
+		width: 120%;
 	}
 `;
 
@@ -113,5 +126,8 @@ export const Submit = styled.button`
 	}
 	&:disabled {
 		opacity: 0.2;
+	}
+	@media (min-width: 1200px) {
+		margin-left: 3.5rem;
 	}
 `;

@@ -13,6 +13,7 @@ import Home from './views/Home';
 import Register from './views/Register';
 import Signin from './views/signin';
 import Signup from './views/signup.js';
+import Dashboard from './views/Dashboard';
 
 // Initialize Google Analytics
 ReactGA.initialize(process.env.REACT_APP_GA_CODE);
@@ -52,6 +53,7 @@ const App = () => {
 					/>
 					<AppRoute exact path={ROUTES.SIGNIN} component={Signin} />
 					<AppRoute exact path={ROUTES.SIGNUP} component={Signup} />
+					<AppRoute exact path={ROUTES.DASHBOARD} component={Dashboard} />
 				</Switch>
 			)}
 		/>

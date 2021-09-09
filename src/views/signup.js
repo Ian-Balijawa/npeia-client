@@ -3,9 +3,10 @@ import { Link, useHistory } from 'react-router-dom';
 import { FirebaseContext } from '../context/firebase';
 import { Form } from '../components';
 import * as ROUTES from '../constants/routes';
-import { Header } from '../components/accordion/styles/accordion';
+import Header from '../components/layout/Header';
+import Footer from '../components/layout/Footer';
 
-export default function Register() {
+export default function Signup() {
 	const history = useHistory();
 	// const { firebase } = useContext(FirebaseContext);
 
@@ -18,16 +19,13 @@ export default function Register() {
 	const [phone, setPhone] = useState('');
 	const [error, setError] = useState(null);
 
-	const isInvalid = () => {
-		return firstName === '' ||
-			lastName === '' ||
-			password === '' ||
-			repassword !== password ||
-			phone === '' ||
-			email === ''
-			? true
-			: false;
-	};
+	const isInvalid =
+		firstName === '' ||
+		lastName === '' ||
+		password === '' ||
+		repassword !== password ||
+		phone === '' ||
+		email === '';
 
 	const handleSignup = event => {
 		event.preventDefault();
@@ -55,7 +53,7 @@ export default function Register() {
 
 	return (
 		<>
-			<Header />
+			<Header hideSignup='true' hasBgColor='true' invertColor='true' />
 			<Form>
 				<Form.Title>Sign up</Form.Title>
 				{error && <Form.Error>{error}</Form.Error>}
@@ -90,7 +88,7 @@ export default function Register() {
 						onChange={({ target }) => setRepassword(target.value)}
 					/>
 					<Form.Submit
-						disabled={isInvalid()}
+						disabled={isInvalid}
 						type='submit'
 						data-testid='sign-up'
 					>
@@ -99,7 +97,7 @@ export default function Register() {
 				</Form.Base>
 
 				<Form.Text>
-					Already a user?{' '}
+					Already a Member?{' '}
 					<Form.Link to={ROUTES.SIGNIN}>Sign in.</Form.Link>
 				</Form.Text>
 				<Form.TextSmall>
@@ -107,6 +105,7 @@ export default function Register() {
 					not a bot.
 				</Form.TextSmall>
 			</Form>
+			<Footer />
 		</>
 	);
 }

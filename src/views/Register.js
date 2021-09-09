@@ -12,6 +12,8 @@ import {
 	FormLabel,
 } from '@material-ui/core';
 import './styles.css';
+import Header from '../components/layout/Header';
+import Footer from '../components/layout/Footer';
 
 export default function Register() {
 	const history = useHistory();
@@ -25,9 +27,6 @@ export default function Register() {
 	const [designation, setDesignation] = useState('');
 	const [telephoneContact, setTelephoneContact] = useState('');
 	const [email, setEmail] = useState('');
-
-	const [error, setError] = useState(null);
-
 	//OWNERSHIP DETAILS PART
 	const [ownerShipType, setOwnershipType] = useState('');
 	const [otherOwnershipType, setOtherOwnershipType] = useState('');
@@ -40,6 +39,7 @@ export default function Register() {
 	const [regNumber, setRegNumber] = useState('');
 	const [schoolCategory, setSchoolCategory] = useState('mixed');
 	const [dayBoarding, setDayBoarding] = useState('');
+	const [error, setError] = useState(null);
 
 	const isInvalid = () => {
 		return institutionName === '' ||
@@ -79,10 +79,21 @@ export default function Register() {
 
 	return (
 		<>
+			{' '}
+			<Header hideRegister='true' hasBgColor='true' />
 			<Form>
 				<Form.Title>Register School</Form.Title>
 				{error && <Form.Error>{error}</Form.Error>}
 
+				<FormLabel
+					style={{
+						textAlign: 'center',
+						color: 'white',
+						marginBottom: '10px',
+					}}
+				>
+					Membership Details
+				</FormLabel>
 				<Form.Base onSubmit={handleSignup} method='POST'>
 					<Form.Input
 						placeholder='Institution Name'
@@ -106,6 +117,34 @@ export default function Register() {
 							setContactPerson(target.value)
 						}
 					/>
+					<Form.Input
+						type='text'
+						value={telephoneContact}
+						placeholder='Phone Contact'
+						onChange={({ target }) =>
+							setTelephoneContact(target.value)
+						}
+					/>
+					<Form.Input
+						type='text'
+						value={email}
+						placeholder='Email of Contact Person'
+						onChange={({ target }) => setEmail(target.value)}
+					/>
+					<Form.Input
+						type='text'
+						value={registrationNumber}
+						placeholder='Registration Number'
+						onChange={({ target }) =>
+							setRegistrationNumber(target.value)
+						}
+					/>
+					<Form.Input
+						type='text'
+						value={designation}
+						placeholder='Designation'
+						onChange={({ target }) => setDesignation(target.value)}
+					/>
 					<Form.Break />
 					<FormLabel style={{ textAlign: 'center', color: 'white' }}>
 						OwnershipType
@@ -118,16 +157,19 @@ export default function Register() {
 						}
 					>
 						<FormControlLabel
+							color='blue'
 							value='soleProprietorship'
 							control={<Radio />}
 							label='Sole Proprietorship'
 						/>
 						<FormControlLabel
+							color='blue'
 							value='partnership'
 							control={<Radio />}
 							label='Partnership'
 						/>
 						<FormControlLabel
+							color='blue'
 							value='limitedCompany'
 							control={<Radio />}
 							label='Limited Company'
@@ -261,6 +303,7 @@ export default function Register() {
 					not a bot.
 				</Form.TextSmall>
 			</Form>
+			<Footer />
 		</>
 	);
 }

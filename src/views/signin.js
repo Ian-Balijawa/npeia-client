@@ -3,6 +3,8 @@ import { useHistory } from 'react-router-dom';
 import { FirebaseContext } from '../context/firebase';
 import { Form } from '../components';
 import * as ROUTES from '../constants/routes';
+import Header from '../components/layout/Header';
+import Footer from '../components/layout/Footer';
 
 export default function Signin() {
 	const history = useHistory();
@@ -32,6 +34,8 @@ export default function Signin() {
 
 	return (
 		<>
+			{' '}
+			<Header hideSignin='true' hasBgColor='true' invertColor='true' />
 			<Form>
 				<Form.Title>Sign In</Form.Title>
 				{error && <Form.Error data-testid='error'>{error}</Form.Error>}
@@ -59,7 +63,7 @@ export default function Signin() {
 				</Form.Base>
 
 				<Form.Text>
-					New to Netflix?{' '}
+					New to NAPEIA?{' '}
 					<Form.Link to='/signup'>Sign up now.</Form.Link>
 				</Form.Text>
 				<Form.TextSmall>
@@ -67,6 +71,7 @@ export default function Signin() {
 					not a bot. Learn more.
 				</Form.TextSmall>
 			</Form>
+			<Footer />
 		</>
 	);
 }

@@ -26,8 +26,12 @@ const Header = ({
 	navPosition,
 	hideNav,
 	hideSignin,
+	hideRegister,
+	hideSignup,
 	bottomOuterDivider,
 	bottomDivider,
+	hasBgColor,
+	invertColor,
 	...props
 }) => {
 	const [isActive, setIsactive] = useState(false);
@@ -76,6 +80,8 @@ const Header = ({
 	const classes = classNames(
 		'site-header',
 		bottomOuterDivider && 'has-bottom-divider',
+		hasBgColor && 'has-bg-color',
+		invertColor && 'invert-color',
 		className
 	);
 
@@ -109,19 +115,6 @@ const Header = ({
 								)}
 							>
 								<div className='header-nav-inner'>
-									<ul
-										className={classNames(
-											'list-reset text-xs',
-											navPosition &&
-												`header-nav-${navPosition}`
-										)}
-									>
-										<li>
-											<Link to='#0' onClick={closeMenu}>
-												Contact us
-											</Link>
-										</li>
-									</ul>
 									{!hideSignin && (
 										<ul className='list-reset header-nav-right'>
 											<li>
@@ -131,6 +124,32 @@ const Header = ({
 													onClick={closeMenu}
 												>
 													Sign in
+												</Link>
+											</li>
+										</ul>
+									)}
+									{!hideSignup && (
+										<ul className='list-reset header-nav-right'>
+											<li>
+												<Link
+													to={ROUTES.SIGNUP}
+													className='button button-primary button-wide-mobile button-sm'
+													onClick={closeMenu}
+												>
+													Sign up
+												</Link>
+											</li>
+										</ul>
+									)}
+									{!hideRegister && (
+										<ul className='list-reset header-nav-right'>
+											<li>
+												<Link
+													to={ROUTES.REGISTER}
+													className='button button-primary button-wide-mobile button-sm'
+													onClick={closeMenu}
+												>
+													Register School
 												</Link>
 											</li>
 										</ul>

@@ -8,8 +8,8 @@ const Home = () => {
 	return (
 		<>
 			<Hero
-				hasBgColor='true'
-				invertColor='true'
+				hasBgColor={true}
+				invertColor={true}
 				className='illustration-section-01'
 			/>
 			<FeaturesTiles />

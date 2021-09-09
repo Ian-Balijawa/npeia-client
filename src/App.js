@@ -53,7 +53,11 @@ const App = () => {
 					/>
 					<AppRoute exact path={ROUTES.SIGNIN} component={Signin} />
 					<AppRoute exact path={ROUTES.SIGNUP} component={Signup} />
-					<AppRoute exact path={ROUTES.DASHBOARD} component={Dashboard} />
+					<AppRoute
+						exact
+						path={ROUTES.DASHBOARD}
+						component={Dashboard}
+					/>
 				</Switch>
 			)}
 		/>

@@ -11,7 +11,6 @@ import {
 	FormGroup,
 	FormLabel,
 } from '@material-ui/core';
-import './styles.css';
 import Header from '../components/layout/Header';
 import Footer from '../components/layout/Footer';
 
@@ -146,8 +145,14 @@ export default function Register() {
 						onChange={({ target }) => setDesignation(target.value)}
 					/>
 					<Form.Break />
-					<FormLabel style={{ textAlign: 'center', color: 'white' }}>
-						OwnershipType
+					<FormLabel
+						style={{
+							textAlign: 'center',
+							margin: '1rem 0',
+							color: 'white',
+						}}
+					>
+						Ownership Type
 					</FormLabel>
 					<RadioGroup
 						style={{ display: 'flex', flexDirection: 'row' }}

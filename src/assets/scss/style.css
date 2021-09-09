@@ -382,12 +382,12 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-body::-webkit-scrollbar {
+::-webkit-scrollbar {
   width: 6px;
 }
 
-body::-webkit-scrollbar-thumb {
-  background-color: rgb(0, 83, 179);
+::-webkit-scrollbar-thumb {
+  background-color: rgb(218, 224, 221);
   /* outline: 1px solid slategrey; */
   border-radius: 5px;
 }

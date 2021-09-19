@@ -4,6 +4,9 @@ import AppRoute from './utils/AppRoute';
 import ScrollReveal from './utils/ScrollReveal';
 import ReactGA from 'react-ga';
 import * as ROUTES from './constants/routes';
+import useAuthListener from './hooks/useAuthListener';
+
+import './assets/scss/style.css';
 
 // Layouts
 import LayoutDefault from './layouts/LayoutDefault';
@@ -14,6 +17,7 @@ import Register from './views/Register';
 import Signin from './views/signin';
 import Signup from './views/signup.js';
 import Dashboard from './views/Dashboard';
+import Playground from './views/Playground';
 
 // Initialize Google Analytics
 ReactGA.initialize(process.env.REACT_APP_GA_CODE);
@@ -40,6 +44,7 @@ const App = () => {
 			ref={childRef}
 			children={() => (
 				<Switch>
+					<AppRoute exact path='/play' component={Playground} />
 					<AppRoute
 						exact
 						path={ROUTES.HOME}
@@ -53,11 +58,11 @@ const App = () => {
 					/>
 					<AppRoute exact path={ROUTES.SIGNIN} component={Signin} />
 					<AppRoute exact path={ROUTES.SIGNUP} component={Signup} />
-					<AppRoute
+					{/* <AppRoute
 						exact
 						path={ROUTES.DASHBOARD}
 						component={Dashboard}
-					/>
+					/> */}
 				</Switch>
 			)}
 		/>

@@ -71,9 +71,18 @@ const Hero = ({
 								>
 									“{' '}
 								</span>
-								Inspiring Private Educational Entrepreneurship,
-								innovation, Progress and Advancing{' '}
-								<span className='text-color-primary'>
+								<spa
+									className='reveal-from-top'
+									data-reveal-delay='340'
+								>
+									Inspiring Private Educational
+									Entrepreneurship, innovation, Progress and
+									Advancing{' '}
+								</spa>
+								<span
+									className='text-color-primary reveal-from-bottom'
+									data-reveal-delay='700'
+								>
 									Excellence
 								</span>
 								<span
@@ -83,29 +92,16 @@ const Hero = ({
 									”{' '}
 								</span>
 							</p>
-							<div
-								className='reveal-from-bottom'
-								data-reveal-delay='200'
-							>
+							<div>
 								<ButtonGroup>
-									<Button color='primary' wideMobile>
-										<Link
-											to={ROUTES.REGISTER}
-											style={{ color: 'white' }}
-										>
+									<Link
+										to={ROUTES.REGISTER}
+										style={{ color: 'white' }}
+									>
+										<Button color='primary'>
 											Register Your School
-										</Link>
-									</Button>
-									<Button color='secondary' wideMobile>
-										<Link
-											to={ROUTES.SIGNUP}
-											style={{
-												color: 'white',
-											}}
-										>
-											Sign up
-										</Link>
-									</Button>
+										</Button>
+									</Link>
 								</ButtonGroup>
 							</div>
 						</div>

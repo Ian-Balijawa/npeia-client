@@ -39,11 +39,11 @@ const Footer = ({ className, topOuterDivider, topDivider, ...props }) => {
 							<FooterSocial />
 						</div>
 						<div className='footer-copyright'>
-							Made by{' '}
+							Built by{' '}
 							<Link to='https://www.accessadvancedsystems.com'>
 								accessadvancedsystems
 							</Link>
-							. All right reserved
+							. All rights reserved
 						</div>
 					</div>
 				</div>

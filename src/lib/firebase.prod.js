@@ -1,23 +1,18 @@
-import Firebase from 'firebase/app';
-import 'firebase/firestore';
-import 'firebase/auth';
+// import { Firebase } from 'firebase/app';
+// import 'firebase/firestore';
+// import 'firebase/auth';
 
-// 1) when seeding the database you'll have to uncomment this!
-// import { seedDatabase } from '../seed';
+// import { config } from '../config/FirebaseConfig.js';
 
-const config = {
-  apiKey: '',
-  authDomain: '',
-  databaseURL: '',
-  projectId: '',
-  storageBucket: '',
-  messagingSenderId: '',
-  appId: '',
-};
+// // we need to somehow seed the database
 
-const firebase = Firebase.initializeApp(config);
-// 2) when seeding the database you'll have to uncomment this!
-// seedDatabase(firebase);
-// 3) once you have populated the database (only run once!), re-comment this so you don't get duplicate data
+// // we need a config here
 
-export { firebase };
+// // we then initialize the firebase app with that config
+
+// const firebase = Firebase.initializeApp(config);
+
+// firebase.firestore().settings({
+// 	timestampsInSnapshots: true,
+// });
+// export { firebase };

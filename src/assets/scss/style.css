@@ -75,6 +75,10 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+.red-placeholder::placeholder{
+  color: crimson;
+}
+
 article,
 aside,
 footer,
@@ -114,7 +118,7 @@ pre {
 }
 
 a {
-  background-color: transparent;
+  /* background-color: transparent; */
   -webkit-text-decoration-skip: objects;
 }
 
@@ -518,10 +522,11 @@ html {
 }
 
 body {
-  color: #9CA9B3;
+  color: rgb(255, 255, 255);
   font-size: 1rem;
+  opacity: .9;
 }
-
+  
 body,
 button,
 input,
@@ -2342,6 +2347,20 @@ textarea.form-input {
   margin-bottom: 0;
 }
 
+.footer-nav ul :first-child{
+  color: white;
+  font-size: 20px;
+  margin-right: 1rem;
+}
+.footer-nav ul{
+  display: inline-block;
+  margin-top: 1rem;
+  border-spacing: 4px;
+}
+.footer-nav ul > li{
+  margin-top: .4rem;
+  margin-bottom: .2rem;
+}
 .footer-social ul {
   margin-right: -16px;
   margin-left: -16px;
@@ -3413,4 +3432,163 @@ img.has-shadow {
             justify-content: center;
   }
 }
-/*# sourceMappingURL=style.css.map */
+
+
+/* ----------------------------------------------------------------------------------------------------------
+   -------------------------------------------SIDEBAR--------------------------------------------------------
+   ----------------------------------------------------------------------------------------------------------
+*/
+/* .sidebar__container{
+  width: 15%;
+  align-items: center;
+  background-color: #ffffff;
+  height: 100vh;
+  overflow-x: scroll;
+}
+
+.sidebar__container .image__container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidebar__container .image__container img{
+  border-radius: 50%;
+  background-color: white;
+  margin-top: 10px;
+  width: 40%;
+  height:40%;
+}
+
+.sidebar__container p:first-of-type{
+  font-size: 16px;
+  font-weight: 100;
+  text-align: center;
+}
+.sidebar__container p:last-of-type{
+  font-size: 13px;
+  margin-top: -1.3rem;
+  text-align: center;
+
+}
+
+.sidebar__container ul{
+  margin-left: -20px;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.sidebar__container li{
+  margin: 1rem 0;
+  width: 100%;
+  text-align: center;
+}
+/* 
+-----------------------------------------------------------------------------
+--------------------------------------DASHBOARD------------------------------
+-----------------------------------------------------------------------------
+*/
+/* 
+.dashboard__container{
+	background: #f0f1f1;
+  color: rgb(0, 0, 0);
+  display: flex;
+  opacity: .8;
+}
+
+.header-dashboard__container{
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  height: fit-content;
+}
+.header-dashboard__container .input-logo{
+  display: flex;
+  justify-content: space-between;
+  height: fit-content;
+}
+.header-dashboard__container .input-logo input{
+  outline: none;
+  border-radius: 30px;
+  border: 1px solid gray;
+  padding-left: 1rem;
+  font-size: 16px;
+
+}
+
+.header-dashboard__container img{
+  width: 2rem;
+  margin:  0 1rem;
+  height: 2rem;
+}
+.header-dashboard__container .header-dashboard__profile{
+  display: flex;
+  height: fit-content;
+  justify-content: space-between;
+  padding: 0 4rem;
+}
+.header-dashboard__container .header-dashboard__profile > p:first-of-type{
+  font-size: small;
+  margin-top: .3rem;
+  margin-right: 5px;
+}
+
+.header-dashboard__container .header-dashboard__profile button{
+  height: 1.5rem;
+  border-radius: 4px;
+  outline: none;
+  background-color: crimson;
+  border: none;
+  padding: 5px;
+  font-size: small;
+  cursor: pointer;
+  margin-left: 1rem;
+  color: white;
+}
+.header-dashboard__container .header-dashboard__profile button:hover{
+  background-color: rgb(255, 0, 51);
+}
+.header-dashboard__container .header-dashboard__profile button:active{
+  z-index: -999;
+}
+
+.pagination__container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.pagination__container .pagination-btns{
+  display: flex;
+  justify-content: space-between;
+  width: 20%;
+}
+.pagination__container .pagination-btns .btn-all{
+  height: fit-content;
+  border: none;
+  border-radius: 3px;
+  color: white;
+  width: 50px;
+  font-size: 24px;
+  padding: 10px;
+  background: #0e12ff;
+}
+.pagination__container .pagination-btns .btn-group{
+  height: fit-content;
+  border: none;
+  border-radius: 3px;
+  color: white;
+  font-size: 24px;
+  padding: 10px;
+}
+
+
+.content-area__container{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+} */
+
+/* sourceMappingURL=style.css.map */

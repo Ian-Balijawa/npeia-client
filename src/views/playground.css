@@ -1,0 +1,74 @@
+
+
+/* 
+    sidebar
+*/
+body{
+    background-color:rgb(94, 94, 94);
+    opacity: .9;
+}
+
+.sidebar__container__close {
+    width: 2rem;
+    display: relative;
+    right: 2rem;
+    height: 2rem;
+}
+
+.sidebar__hidden{
+    visibility: hidden;
+    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.3s ease;
+}
+.sidebar__container {
+    width: 10rem;
+    border-right: 1px solid rgb(226, 226, 226);
+    color: black;
+    background-color: #fff;
+    opacity: .8;
+    height: 100vh;
+    overflow: scroll;
+} 
+
+.sidebar__container .sidebar__profile{
+    padding: 10px;
+}
+.sidebar__container .sidebar__profile__pic{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+}
+.sidebar__container .sidebar__profile__pic img{
+    width:4rem;
+    border-radius: 50%;
+    margin-left: 2.5rem;
+}
+.sidebar__container .sidebar__profile__meta :first-child{
+    font-weight: bold;
+    text-align: center;
+    font-size: 18px;
+    text-shadow: 1px 1px 2px rgb(190, 190, 190);
+}
+.sidebar__container .sidebar__profile__meta :last-child{
+    text-align: center;
+    font-size: 12px;
+    margin-top: -1rem;
+    font-weight: 100;
+    text-shadow: 1px 1px 2px rgb(253, 253, 253);
+}
+.sidebar__container .sidebar__nav{
+}
+
+.sidebar__container nav li{
+    color: black;
+    margin-top: 4px;
+    padding-left: 2rem;
+    height: 2rem;
+    font-size: 16px;
+}
+.sidebar__container nav li:hover{
+    transition: all .2s ease;
+    font-weight: 700;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.5);
+    background: rgb(253, 247, 247);
+}

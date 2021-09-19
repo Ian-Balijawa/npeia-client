@@ -1,11 +1,11 @@
 import * as React from 'react';
-
+import DashboardContainer from '../containers/Dashboard';
 const Dashboard = () => {
 	return (
-		<div className="dashboard__container">
-			<p>Dashboard goes here</p>
+		<div className=''>
+			<DashboardContainer />
 		</div>
-	)
+	);
 };
 
 export default Dashboard;

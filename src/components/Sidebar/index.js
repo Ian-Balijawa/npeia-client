@@ -1,38 +1,29 @@
 import React from 'react';
+import classNames from 'classnames';
+import './sidebar.css';
 
-import {
-	Container,
-	Group,
-	Image,
-	List,
-	Profile,
-	ListGroup,
-	Text,
-} from './styles/Sidebar';
+export default function Sidebar(props) {
+	const { displayName, isAdmin, photoURL } = props;
+	const classes = classNames('sidebar__container');
 
-export default function Sidebar({ children, ...restProps }) {
-	return <Container {...restProps}>{children}</Container>;
+	return (
+		<div className={classes}>
+			<div className='sidebar__profile'>
+				<div className='image__container'>
+					<img
+						src={`/images/avatars/${photoURL}.png`}
+						alt='profile pic'
+					/>
+				</div>
+				<p>Welcome{displayName}</p>
+				<p>{isAdmin && 'Super Admin'}</p>
+			</div>
+			<ul>
+				<li>list item</li>
+				<li>list item </li>
+				<li>list item</li>
+				<li>list item</li>
+			</ul>
+		</div>
+	);
 }
-
-Sidebar.Profile = ({ children, ...restProps }) => {
-	return <Profile {...restProps}>{children}</Profile>;
-};
-
-Sidebar.Image = ({ children, ...restProps }) => {
-	return <Image {...restProps} />;
-};
-
-Sidebar.List = ({ children, ...restProps }) => {
-	return <List {...restProps}>{children}</List>;
-};
-
-Sidebar.Group = ({ children, ...restProps }) => {
-	return <Group {...restProps}>{children}</Group>;
-};
-Sidebar.ListGroup = ({ children, ...restProps }) => {
-	return <ListGroup {...restProps}>{children}</ListGroup>;
-};
-
-Sidebar.Text = ({ children, ...restProps }) => {
-	return <Text {...restProps}>{children}</Text>;
-};

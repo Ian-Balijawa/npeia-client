@@ -26,7 +26,6 @@ export default function Register() {
 	const [designation, setDesignation] = useState('');
 	const [telephoneContact, setTelephoneContact] = useState('');
 	const [email, setEmail] = useState('');
-	//OWNERSHIP DETAILS PART
 	const [ownerShipType, setOwnershipType] = useState('');
 	const [otherOwnershipType, setOtherOwnershipType] = useState('');
 	const [ownerName, setOwnerName] = useState('');
@@ -37,7 +36,17 @@ export default function Register() {
 	const [registered, setRegistered] = useState('');
 	const [regNumber, setRegNumber] = useState('');
 	const [schoolCategory, setSchoolCategory] = useState('mixed');
-	const [dayBoarding, setDayBoarding] = useState('');
+	const [dayBoarding, setDayBoarding] = useState('both');
+	const [village, setVillage] = useState('');
+	const [parish, setParish] = useState('');
+	const [subCounty, setSubCounty] = useState('');
+	const [district, setDistrict] = useState('');
+	const [contactAddress, setContactAddress] = useState(telephoneContact);
+	const [emailAddress, setEmailAddress] = useState('');
+	const [website, setWebsite] = useState('');
+	const [enrollment, setEnrollment] = useState('');
+	const [teachingStaffFemale, setTeachingStaffFemale] = useState('');
+	const [teachingStaffMale, setTeachingStaffMale] = useState('');
 	const [error, setError] = useState(null);
 
 	const isInvalid = () => {
@@ -144,7 +153,6 @@ export default function Register() {
 						placeholder='Designation'
 						onChange={({ target }) => setDesignation(target.value)}
 					/>
-					<Form.Break />
 					<FormLabel
 						style={{
 							textAlign: 'center',
@@ -289,14 +297,89 @@ export default function Register() {
 						/>
 					</RadioGroup>
 
-					<Form.Submit
-						disabled={isInvalid()}
-						type='submit'
-						onClick={handleSignup}
-						data-testid='sign-up'
+					<Form.Input
+						type='text'
+						value={parish}
+						placeholder='Parish'
+						onChange={({ target }) => setParish(target.value)}
+					/>
+					<Form.Input
+						type='text'
+						value={village}
+						placeholder='Village (LC.1)'
+						onChange={({ target }) => setVillage(target.value)}
+					/>
+					<Form.Input
+						type='text'
+						value={subCounty}
+						placeholder='Sub County / Municipality / Division'
+						onChange={({ target }) => setSubCounty(target.value)}
+					/>
+					<Form.Input
+						type='text'
+						value={district}
+						placeholder='District'
+						onChange={({ target }) => setDistrict(target.value)}
+					/>
+					<Form.Input
+						type='text'
+						value={contactAddress}
+						placeholder='Contact'
+						onChange={({ target }) =>
+							setContactAddress(target.value)
+						}
+					/>
+					<Form.Input
+						type='text'
+						value={emailAddress}
+						placeholder='Email Address'
+						onChange={({ target }) => setEmailAddress(target.value)}
+					/>
+					<Form.Input
+						type='text'
+						value={website}
+						placeholder='Website'
+						onChange={({ target }) => setWebsite(target.value)}
+					/>
+					<Form.Input
+						type='text'
+						value={enrollment}
+						placeholder='Enrollment'
+						onChange={({ target }) => setEnrollment(target.value)}
+					/>
+					<Form.Input
+						type='text'
+						id='teachingStaffFemale'
+						value={teachingStaffFemale}
+						placeholder={'No. Teaching-Staff Females'}
+						onChange={({ target }) =>
+							setTeachingStaffFemale(target.value)
+						}
+					/>
+					<Form.Input
+						type='text'
+						value={teachingStaffMale}
+						placeholder='No. Teaching-Staff Males'
+						onChange={({ target }) =>
+							setTeachingStaffMale(target.value)
+						}
+					/>
+					<Form.Link
+						to={ROUTES.DASHBOARD}
+						styles={{
+							display: 'flex',
+							width: '120%',
+							justifyContent: 'center',
+						}}
 					>
-						<Link to={ROUTES.DASHBOARD}>REGISTER</Link>
-					</Form.Submit>
+						<Form.Submit
+							type='submit'
+							data-testid='sign-up'
+							aria-label='register'
+						>
+							REGISTER
+						</Form.Submit>
+					</Form.Link>
 				</Form.Base>
 
 				<Form.Text>

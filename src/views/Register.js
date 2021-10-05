@@ -18,7 +18,7 @@ export default function Register() {
 	const history = useHistory();
 	// const { firebase } = useContext(FirebaseContext);
 
-	//MEMBERSHIP DETAILS   
+	//MEMBERSHIP DETAILS
 	const [institutionName, setInstitutionName] = useState('');
 	const [memberShipCategory, setMemberShipCategory] = useState('');
 	const [contactPerson, setContactPerson] = useState('');

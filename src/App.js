@@ -4,7 +4,6 @@ import AppRoute from './utils/AppRoute';
 import ScrollReveal from './utils/ScrollReveal';
 import ReactGA from 'react-ga';
 import * as ROUTES from './constants/routes';
-import useAuthListener from './hooks/useAuthListener';
 
 import './assets/scss/style.css';
 
@@ -16,7 +15,6 @@ import Home from './views/Home';
 import Register from './views/Register';
 import Signin from './views/signin';
 import Signup from './views/signup.js';
-import Dashboard from './views/Dashboard';
 import Playground from './views/Playground';
 
 // Initialize Google Analytics

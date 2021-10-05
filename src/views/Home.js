@@ -2,7 +2,7 @@ import React from 'react';
 import Hero from '../components/sections/Hero';
 import FeaturesTiles from '../components/sections/FeaturesTiles';
 import FeaturesSplit from '../components/sections/FeaturesSplit';
-import { FaqsContainer } from '../containers/Faqs';
+import { FaqsContainer } from '../components/Faqs/Faqs';
 
 const Home = () => {
 	return (

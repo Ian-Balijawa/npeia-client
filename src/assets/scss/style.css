@@ -380,7 +380,7 @@ html {
 }
 
 body {
-  background: #0B0E11;
+  background: #080808;
   /* Fallback for when there is no custom background color defined. */
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;

@@ -4,8 +4,9 @@
     sidebar
 */
 body{
-    background-color:rgb(94, 94, 94);
+    background-color:rgb(0, 0, 0);
     opacity: .9;
+    color: #fff;
 }
 
 .sidebar__container__close {

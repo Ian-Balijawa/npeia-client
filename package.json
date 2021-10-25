@@ -1,5 +1,5 @@
 {
-	"name": "open-react-template",
+	"name": "napeia",
 	"version": "0.1.0",
 	"private": true,
 	"dependencies": {
@@ -20,13 +20,14 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/cruip/open-react-template.git"
+		"url": "https://github.com/Ian-Balijawa/npeia-client.git"
 	},
 	"scripts": {
 		"start": "react-scripts start",
 		"build": "react-scripts build",
 		"test": "react-scripts test",
-		"eject": "react-scripts eject"
+		"eject": "react-scripts eject",
+		"deploy": "vercel deploy"
 	},
 	"eslintConfig": {
 		"extends": "react-app"
@@ -43,5 +44,7 @@
 			"last 1 safari version"
 		]
 	},
-	"devDependencies": {}
+	"devDependencies": {
+		"vercel": "^23.1.2"
+	}
 }
